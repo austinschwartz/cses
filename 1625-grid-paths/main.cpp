@@ -223,7 +223,8 @@ void dfs(int i, int j, int n) {
   }
 
   vis[i][j] = true;
-  
+ 
+  // Optimization 3 from https://cses.fi/book/book.pdf#page=62
   if (c[n] == 'D' || c[n] == '?') {
     if (i < 6 && valid(i + 1, j)) {
       // Going down and can go left + right, this will split and we won't be able to reach goal state
